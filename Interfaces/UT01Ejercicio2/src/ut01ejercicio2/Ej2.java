@@ -42,20 +42,20 @@ public class Ej2 extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         nombre = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        lista = new javax.swing.JComboBox<>();
         Enviar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Ejercicio2");
 
         jLabel1.setText("Nombre");
 
         jLabel2.setText("Lista");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Hola", "No ", "Se ", "Como ", "Hacer" }));
-        jComboBox1.setToolTipText("Hola");
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        lista.setToolTipText("Hola");
+        lista.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                listaActionPerformed(evt);
             }
         });
 
@@ -81,7 +81,7 @@ public class Ej2 extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(lista, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -92,10 +92,10 @@ public class Ej2 extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lista, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(Enviar)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         pack();
@@ -103,12 +103,13 @@ public class Ej2 extends javax.swing.JFrame {
 
     private void EnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnviarActionPerformed
         // TODO add your handling code here:
-        System.out.println("Hola "+nombre.getText());
+        lista.addItem(nombre.getText());
+        nombre.setText("");
     }//GEN-LAST:event_EnviarActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void listaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_listaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -147,9 +148,9 @@ public class Ej2 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Enviar;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JComboBox<String> lista;
     private javax.swing.JTextField nombre;
     // End of variables declaration//GEN-END:variables
 }
