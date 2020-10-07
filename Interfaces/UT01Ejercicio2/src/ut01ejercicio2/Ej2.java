@@ -15,7 +15,7 @@
  * En ese método vamos a ejecutar lo que pasa cuando CLICKAMOS el botón. El código que va ahí, se
  * ejecuta cuando se hace click.
  */
-package ut01ejercicio2;
+package Interfaces.UT01Ejercicio2.src.ut01ejercicio2;
 
 /**
  *
