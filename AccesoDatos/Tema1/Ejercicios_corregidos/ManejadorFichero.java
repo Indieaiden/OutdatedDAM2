@@ -1,6 +1,8 @@
 package AccesoDatos.Tema1.Ejercicios_corregidos;
 import java.io.*;
-
+/**
+ * Cuatro primeros ejercicios sin pruebas ni main hechos.
+ */
 public class ManejadorFichero {
     
     private File f;
