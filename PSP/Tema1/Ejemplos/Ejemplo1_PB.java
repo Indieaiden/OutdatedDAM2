@@ -8,7 +8,7 @@ public class Ejemplo1_PB {
 		String comando = "cmd"; 
 
 		try{ 
-            
+            //Primero COMANDO y luego ARGUMENTOS
             ProcessBuilder pb = new ProcessBuilder("cmd", "/c", "dir");
             Process process = pb.start();
             //Creamos un buffered Reader para poder leer línea a línea
