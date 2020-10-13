@@ -1,4 +1,4 @@
-package AccesoDatos.Tema1;
+package AccesoDatos.Tema1.Ejemplos.T1;
 import java.io.*;
 
 public class E_SEjemplo {
